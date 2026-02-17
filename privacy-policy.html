@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PersonaLens</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #E8E8ED;
+            background: linear-gradient(180deg, #1C1F2E 0%, #13141F 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #A8B5A0 0%, #8FA084 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .updated {
+            color: #8E8E93;
+            font-size: 0.875rem;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: #E8E8ED;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #AEAEB2;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            color: #AEAEB2;
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #A8B5A0 0%, #8FA084 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #8E8E93;
+            font-size: 0.875rem;
+        }
+
+        a {
+            color: #A8B5A0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="logo-text">PersonaLens</span>
+        </div>
+
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last Updated: February 16, 2026</p>
+
+        <h2>1. What PersonaLens Does</h2>
+        <p>PersonaLens is a personality-insight app that analyzes your messaging conversations (imported from Telegram, uploaded as WhatsApp chat exports, or pasted as text) to generate AI-powered personality reflections. These reflections are for self-awareness and entertainment purposes only &mdash; they are not clinical, psychological, or medical assessments.</p>
+
+        <h2>2. Data We Collect</h2>
+        <p><strong>Account information:</strong> When you sign in with Apple, we receive your Apple-provided user identifier and, optionally, your name and email address. We do not receive your Apple ID password.</p>
+        <p><strong>Conversation data:</strong> You may connect your Telegram account to import conversations, upload WhatsApp chat export files (.txt, .zip), or paste conversation text directly. This data is used solely to generate your personality analysis.</p>
+        <p><strong>Purchase information:</strong> We use Apple's StoreKit framework to manage subscriptions and in-app purchases. Payment processing is handled entirely by Apple. We only receive transaction confirmation details, not your payment information.</p>
+        <p><strong>Device-level analytics:</strong> We may collect anonymized, aggregated usage data (e.g., feature usage counts, crash reports via Apple's MetricKit) to improve the app. This data cannot be used to identify you.</p>
+
+        <h2>3. How We Process Your Data</h2>
+        <p>Feature extraction happens on your device. Selected message excerpts are sent to a cloud-based large language model (LLM) via our secure backend proxy (hosted on Cloudflare Workers) to generate your report. The LLM provider does not store your conversation data beyond the duration of the API request. We do not use your conversations to train any AI models.</p>
+
+        <h2>4. Data Storage and Security</h2>
+        <p>Your generated reports are stored locally on your device using AES-256 encryption and iOS file protection. We do not store your conversation content or reports on our servers. All network communication uses TLS 1.2 or higher. Sensitive credentials (such as Telegram session tokens and authentication keys) are stored in the iOS Keychain, which provides hardware-backed encryption.</p>
+
+        <h2>5. Chat Import Methods</h2>
+        <p><strong>Telegram:</strong> If you choose to connect Telegram, PersonaLens uses the TDLib (Telegram Database Library) SDK to authenticate and retrieve your chat history directly on your device. Your Telegram credentials are never sent to our servers. You can disconnect Telegram at any time from the app settings, which clears all locally stored Telegram data.</p>
+        <p><strong>WhatsApp:</strong> You can upload a WhatsApp chat export file (.txt or .zip) generated by WhatsApp's built-in export feature. The file is processed entirely on your device. PersonaLens does not connect to WhatsApp's servers or access your WhatsApp account.</p>
+        <p><strong>Copy-Paste:</strong> You can paste conversation text directly into the app. No external service is contacted for this method.</p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>PersonaLens uses the following third-party services:</p>
+        <ul>
+            <li><strong>Apple Sign In</strong> &mdash; for authentication</li>
+            <li><strong>Cloud LLM API</strong> (via Cloudflare Workers proxy) &mdash; for generating personality analyses. Conversation excerpts are sent via encrypted API calls; data is not retained by the provider.</li>
+            <li><strong>Apple StoreKit</strong> &mdash; for subscription and in-app purchase management</li>
+            <li><strong>TDLib (Telegram)</strong> &mdash; for optional Telegram chat import, operating entirely on-device</li>
+        </ul>
+        <p>Each third-party service is bound by its own privacy policy and data processing terms.</p>
+
+        <h2>7. Data Sharing</h2>
+        <p>We do not sell, rent, or share your personal data with third parties for marketing or advertising purposes. Conversation data is shared only with the LLM API provider for the sole purpose of generating your analysis, and is not retained after processing.</p>
+
+        <h2>8. Your Rights and Choices</h2>
+        <p>You can delete all locally stored reports and data at any time from the app's Settings screen. You can disconnect Telegram integration at any time. You can request deletion of your account by contacting us, which will remove any server-side records associated with your Apple Sign In identifier. Since conversation data is not stored on our servers, there is no server-side conversation data to delete.</p>
+
+        <h2>9. Children's Privacy</h2>
+        <p>PersonaLens is not intended for users under the age of 17. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will promptly delete it.</p>
+
+        <h2>10. Data Retention</h2>
+        <p>We retain your Apple Sign In identifier for as long as your account is active. Generated reports are stored only on your device and are retained until you delete them or use the auto-delete feature in Settings. Conversation data is processed in real-time and is not retained after analysis is complete.</p>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. Material changes will be communicated through an in-app notice. Your continued use of PersonaLens after changes are posted constitutes acceptance of the updated policy.</p>
+
+        <h2>12. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or your data, please contact us at <a href="mailto:support@personalens.app">support@personalens.app</a>.</p>
+
+        <footer>
+            <p>&copy; 2026 PersonaLens. All rights reserved.</p>
+            <p><a href="terms-of-service.html">Terms of Service</a> | <a href="support.html">Support</a></p>
+        </footer>
+    </div>
+</body>
+</html>
